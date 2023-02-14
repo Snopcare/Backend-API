@@ -12,11 +12,11 @@ const image = require('./controllers/imageCount');
 const db = knex({
   client: 'pg',
   connection: {
-  	host : '127.0.0.1',
+  	host : 'dpg-cflp0jha6gdjlmqge8cg-a',
     port : 5432,
     user : 'bsnop',
-    password : 'Master87',
-    database : 'Home'
+    password : process.env.DBKEY,
+    database : 'database_gxj9'
   }
 });
 
