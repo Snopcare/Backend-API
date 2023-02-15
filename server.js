@@ -12,10 +12,10 @@ const image = require('./controllers/imageCount');
 const db = knex({
   client: 'pg',
   connection: {
-  	host : 'dpg-cflp0jha6gdjlmqge8cg-a.oregon-postgres.render.com',
+  	host : 'dpg-cflp0jha6gdjlmqge8cg-a',
     port : 5432,
     user : 'bsnop',
-    password : process.env.DBKEY,
+    password : 'prwIcE4yu4Y4e1r2VrIl8GzvxJ9d7VhWL',
     database : 'database_gxj9'
   }
 });
@@ -33,7 +33,7 @@ app.get('/profile/:id', (req,res) => {profile.handleProfile(req, res, db)})
 app.put('/image',(req, res) => {image.imageCount(req, res, db)})
 app.post('/imageurl',(req, res) => {image.handleApiCall(req, res)})
 
-app.listen(process.env.PORT || 10000, () => {
+app.listen(process.env.PORT || 3003, () => {
 	console.log(`app is running on port ${process.env.PORT}`);
 })
 
